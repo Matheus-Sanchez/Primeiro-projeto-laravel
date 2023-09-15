@@ -12,7 +12,7 @@ class aboutController extends Controller
         // Você pode passar quaisquer dados necessários para a view aqui
         $dados = [
             'title' => 'Sobre o Projeto',
-            'description' => 'Este é um projeto Laravel incrível!'
+            'description' => 'Eu passei pelos seu codigo, abraço do eu do futuro'
         ];
 
         return view('about', $dados);
