@@ -6,6 +6,8 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
+Just to test Laravel's book written by my teacher, and give feedback from someone outside of class
+https://thyago-quintas.gitbook.io/laravel
 
 ## About Laravel
 
