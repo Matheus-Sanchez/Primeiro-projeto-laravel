@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+/*Route::get(), Route::post(), Route::put()
+esses sao os metodos laravel para definir as rotas da sua aplicaçã*/
+
+
+Route::get('/home', [HomeController::class, 'index']); 
+Route::post('/login', [AuthController::class, 'login']);
+//rota da view about.blade.php
+Route::get('/about', [AboutController::class, 'index']);
