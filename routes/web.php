@@ -41,7 +41,7 @@ Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show');
 
 use App\Http\Controllers\ProductsController;
 
-Route::get('/', [ProductsController::class, 'index'])->name('products.index');
+Route::get('/', [ProductsController::class, 'index'])->name('products.index');/*
 Route::get('/products/create', [ProductsController::class, 'create'])->name('products.create');
 Route::post('/products', [ProductsController::class, 'store'])->name('products.store');
 
@@ -52,8 +52,8 @@ Route::put('/products/{id}', [ProductsController::class, 'update'])->name('produ
 //excluir um post 
 Route::delete('/products/{id}', [ProductsController::class, 'destroy'])->name('products.destroy');
 //exibir um post
-Route::get('/products/{id}', [ProductsController::class, 'show'])->name('products.show');
-
+Route::get('/products/{id}', [ProductsController::class, 'show'])->name('products.show');*/
+/*
 use App\Http\Controllers\ProductsListController;
 
 Route::get('/', [ProductsListController::class, 'index'])->name('ProductsList.index');
@@ -128,3 +128,4 @@ Route::put('/Client/{id}', [ClientController::class, 'update'])->name('Client.up
 Route::delete('/Client/{id}', [ClientController::class, 'destroy'])->name('Client.destroy');
 //exibir um post
 Route::get('/Client/{id}', [ClientController::class, 'show'])->name('Client.show');
+*/

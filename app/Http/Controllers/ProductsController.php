@@ -12,7 +12,8 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        //
+        $products = Products::all();
+        return view('products.index', ['products' => $products]);
     }
 
     /**
@@ -20,7 +21,7 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        //
+        return view('products.create');
     }
 
     /**
@@ -28,7 +29,7 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Products::create($request->all());
     }
 
     /**
@@ -36,7 +37,8 @@ class ProductsController extends Controller
      */
     public function show(Products $products)
     {
-        //
+        $products = Products::find($products->id);
+        return view('products.show', ['products'=> $products]);
     }
 
     /**
@@ -44,7 +46,7 @@ class ProductsController extends Controller
      */
     public function edit(Products $products)
     {
-        //
+        $products = Products::findOrfail($products->id);
     }
 
     /**
@@ -52,7 +54,9 @@ class ProductsController extends Controller
      */
     public function update(Request $request, Products $products)
     {
-        //
+        $products = Products::findOrfail($products->id);
+        $products->update($request->all());
+        return redirect('products.index')->with('success','products');
     }
 
     /**
