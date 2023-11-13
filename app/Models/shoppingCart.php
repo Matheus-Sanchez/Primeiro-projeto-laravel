@@ -7,5 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class shoppingCart extends Model
 {
-    use HasFactory;
+    protected $fillable = ['client_id'];
+
+    public function client(){
+        return $this->belongsTo(client::class);
+    }
+    public function productsCart(){
+        return $this->hasMany(productsCart::class);
+    }
 }

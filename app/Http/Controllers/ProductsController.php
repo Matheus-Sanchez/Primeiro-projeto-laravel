@@ -30,6 +30,7 @@ class ProductsController extends Controller
     public function store(Request $request)
     {
         Products::create($request->all());
+        return redirect()->route('products.index');
     }
 
     /**
@@ -47,6 +48,7 @@ class ProductsController extends Controller
     public function edit(Products $products)
     {
         $products = Products::findOrfail($products->id);
+        return view('products.edit', ['products'=> $products]);
     }
 
     /**
@@ -56,7 +58,7 @@ class ProductsController extends Controller
     {
         $products = Products::findOrfail($products->id);
         $products->update($request->all());
-        return redirect('products.index')->with('success','products');
+        return redirect(route('products.index'));
     }
 
     /**
@@ -64,6 +66,8 @@ class ProductsController extends Controller
      */
     public function destroy(Products $products)
     {
-        //
+        $$products= Products::findOrfail($products->id);
+        $products->delete();
+        return redirect(route('products.index'));
     }
 }

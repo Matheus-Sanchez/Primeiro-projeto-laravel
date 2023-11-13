@@ -24,7 +24,7 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::get('/about', [AboutController::class, 'index']);
 
 //rotas do arquivo Post
-Route::get('/', [PostController::class, 'index'])->name('posts.index');
+Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
 Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
 Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
 
@@ -41,7 +41,7 @@ Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show');
 
 use App\Http\Controllers\ProductsController;
 
-Route::get('/', [ProductsController::class, 'index'])->name('products.index');/*
+Route::get('/products', [ProductsController::class, 'index'])->name('products.index');
 Route::get('/products/create', [ProductsController::class, 'create'])->name('products.create');
 Route::post('/products', [ProductsController::class, 'store'])->name('products.store');
 
@@ -52,7 +52,7 @@ Route::put('/products/{id}', [ProductsController::class, 'update'])->name('produ
 //excluir um post 
 Route::delete('/products/{id}', [ProductsController::class, 'destroy'])->name('products.destroy');
 //exibir um post
-Route::get('/products/{id}', [ProductsController::class, 'show'])->name('products.show');*/
+Route::get('/products/{id}', [ProductsController::class, 'show'])->name('products.show');
 /*
 use App\Http\Controllers\ProductsListController;
 

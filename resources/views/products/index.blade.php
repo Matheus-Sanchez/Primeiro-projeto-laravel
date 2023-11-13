@@ -1,10 +1,10 @@
 <h1>Listagem de Produtos</h1>
-@foreach ($products as $products)
-    <a href="{{ route('posts.show', $post->id) }}">
-        <h2>{{ $post->title }}</h2>
+@foreach ($products as $product)
+    <a href="{{ route('products.show', $product->id) }}">
+        <h2>{{ $product->name }}</h2>
     </a>
-    <p>{{ $post->content }}</p>
+    <p>{{ $product->description }}</p>
     <hr>
-    @endforeach
+@endforeach
 
-<a href="{{ route('posts.create') }}">Adicionar novo produto</a>
+<a href="{{ route('products.create') }}">Adicionar novo produto</a>

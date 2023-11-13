@@ -7,5 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class ProductsCart extends Model
 {
-    use HasFactory;
+
+    protected $fillable = ['client_id', 'products_id', 'qtd'];
+
+    public function shoppingCart(){
+        return $this->belongsTo(shoppingCart::class);
+    }
+    public function products(){
+        return $this->belongsTo(Products::class);
+    }
 }

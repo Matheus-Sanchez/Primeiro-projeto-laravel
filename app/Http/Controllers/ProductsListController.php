@@ -12,7 +12,7 @@ class ProductsListController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
